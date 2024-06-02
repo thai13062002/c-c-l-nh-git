@@ -1,0 +1,41 @@
+1: git config
+git config -g user.name "dev name"
+git config -g user.email "dev email"
+git configg -list
+cấu hình các biến
+2: git status
+git status
+git status --short
+?? tập tin không bị thay đổi
+A tệp được thêm vào giai đoạn
+M tệp đã sửa dổi
+D các tệp đã xoá.
+3:git diff
+so sánh sự khác biệt kể từ lần commit cuối cùng của bạn
+4: git push
+git push -u origin branch_name : đấy branch vào repo
+git push -d origin branch_name : xoá một branch trên repo
+git push -f origin branch_name : ghi đè lên repo
+5: git fetch : lấy code về nhưng chưa merge
+6: git merge
+git checkout branch_name1
+git merge branch_name2
+merge code từ nhanh branch_name2 vào branch_name1
+7: git pull
+git pull --rebase : cách pull chống sung đột
+8: git stash:
+git stash save # hoặc git stash : lưu lại các công việc làm ở branch này để chuyển sang branch khác khi bạn chưa muốn commit code
+git stash list : xem lại lịch sử thay đổi
+git stash show stash@{n} : xem lại lịch sử thay đổi cụ thể của lần save(n).
+git stash clear xoá toàn bộ stash.
+9: git rebase (hợp nhất code)
+di chuyển về nhánh cần hợp nhất
+git checkout branch_name1
+tiến hành hợp nhất
+git rebase branch_name2 : code từ branch_name2 được hợp nhất vào branch_name1
+tương tự với merge nhưng có sự khác biết
+merge chỉ lấy nội dung commit cuối cùng của 2 nhánh tích hợp tào thành commit mới. Các commit trước dó được dữ nguyên không thay đổi.
+rebase : lấy code từ branch_name2, từ những commit từ brnach_name2 tích hợp đồng thời tái tạo lại các commit ở branch_name1 các commit đã tồn tại sẽ bỏ đi
+10: git revert
+git revert <commit_id> : lấy lại commit đạo ngược commit được chọn
+git revert -hard <commit_id> : đưa branch về trạng thái commit được chọn, lệnh này xoá toàn bộ các commit trược đó
