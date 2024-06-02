@@ -1,0 +1,24 @@
+1: viết sai commit
+để thay đổi nội dung commit, thêm, sửa file vào commit
+git commit --amend
+2: đặt sai tên branch
+git branch -m "tên branch sau khi thay đổi".
+3: xoá commit
++ git reset khi chưa ai pull về
++ git revert khi người khác đã pull
++ sử dụng --AMEND
+4: khi lỡ tay commit nhầm sang branch khác
+git branch other-branch
+git reset --hard HEAD~
+git checkout other-branch
+5: gộp nhiều commit thành 1 commit
+git reset HEAD~1 trờ về commit trước
+git commit -m"nội dung mới"
+git push -f : ghi đè lên nội dung cũ
+6: khôi phục branch đã xoá
+git reflog
+git branch 'tên branch' 'commit_id'
+7: khôi phục về trạng thái trước pull từ remote
+lấy code từ remote
+git pull orgin master
+git reset --hard ORIG_HEAD
