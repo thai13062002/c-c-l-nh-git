@@ -1,2 +1,3 @@
-# c-c-l-nh-git
+cac lenh git
+
 các lệnh hay dùng của git
